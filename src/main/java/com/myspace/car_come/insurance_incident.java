@@ -6,12 +6,36 @@ package com.myspace.car_come;
 
 public class insurance_incident implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public insurance_incident() {
-    }
+	@org.kie.api.definition.type.Label(value = "First name")
+	private java.lang.String first_name;
+	@org.kie.api.definition.type.Label(value = "Last name")
+	private java.lang.String last_name;
 
+	public insurance_incident() {
+	}
 
+	public java.lang.String getFirst_name() {
+		return this.first_name;
+	}
 
+	public void setFirst_name(java.lang.String first_name) {
+		this.first_name = first_name;
+	}
+
+	public java.lang.String getLast_name() {
+		return this.last_name;
+	}
+
+	public void setLast_name(java.lang.String last_name) {
+		this.last_name = last_name;
+	}
+
+	public insurance_incident(java.lang.String first_name,
+			java.lang.String last_name) {
+		this.first_name = first_name;
+		this.last_name = last_name;
+	}
 
 }
