@@ -1,0 +1,1 @@
+{"id":"96c087ff-a9f6-467d-9edb-68b81709529c","name":"car-come.Insuranceevent-taskform.frm","model":{"processName":"Insurance event","processId":"car-come.Insuranceevent","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.process.BusinessProcessFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
