@@ -6,12 +6,36 @@ package com.myspace.car_come;
 
 public class insurance_event_agent_data implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public insurance_event_agent_data() {
-    }
+	@org.kie.api.definition.type.Label(value = "Is false alarm")
+	private java.lang.Boolean isFalseAlarm;
+	@org.kie.api.definition.type.Label(value = "Car functional")
+	private boolean carFunctional;
 
+	public insurance_event_agent_data() {
+	}
 
+	public java.lang.Boolean getIsFalseAlarm() {
+		return this.isFalseAlarm;
+	}
 
+	public void setIsFalseAlarm(java.lang.Boolean isFalseAlarm) {
+		this.isFalseAlarm = isFalseAlarm;
+	}
+
+	public boolean isCarFunctional() {
+		return this.carFunctional;
+	}
+
+	public void setCarFunctional(boolean carFunctional) {
+		this.carFunctional = carFunctional;
+	}
+
+	public insurance_event_agent_data(java.lang.Boolean isFalseAlarm,
+			boolean carFunctional) {
+		this.isFalseAlarm = isFalseAlarm;
+		this.carFunctional = carFunctional;
+	}
 
 }
