@@ -8,10 +8,13 @@ public class insurance_event_agent_data implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Is false alarm")
+	@org.kie.api.definition.type.Label("Is false alarm")
 	private java.lang.Boolean isFalseAlarm;
-	@org.kie.api.definition.type.Label(value = "Car functional")
+	@org.kie.api.definition.type.Label("Car functional")
 	private boolean carFunctional;
+
+	@org.kie.api.definition.type.Label(value = "Need to contact police")
+	private java.lang.Boolean needContactPolice;
 
 	public insurance_event_agent_data() {
 	}
@@ -32,10 +35,19 @@ public class insurance_event_agent_data implements java.io.Serializable {
 		this.carFunctional = carFunctional;
 	}
 
+	public java.lang.Boolean getNeedContactPolice() {
+		return this.needContactPolice;
+	}
+
+	public void setNeedContactPolice(java.lang.Boolean needContactPolice) {
+		this.needContactPolice = needContactPolice;
+	}
+
 	public insurance_event_agent_data(java.lang.Boolean isFalseAlarm,
-			boolean carFunctional) {
+			boolean carFunctional, java.lang.Boolean needContactPolice) {
 		this.isFalseAlarm = isFalseAlarm;
 		this.carFunctional = carFunctional;
+		this.needContactPolice = needContactPolice;
 	}
 
 }
