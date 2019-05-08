@@ -8,46 +8,47 @@ public class InsuranceEventUserData implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label("First name")
-	private java.lang.String first_name;
-	@org.kie.api.definition.type.Label("Last name")
-	private java.lang.String last_name;
+	@org.kie.api.definition.type.Label(value = "First name")
+	private java.lang.String firstName;
 
-	@org.kie.api.definition.type.Label("Need Assistance")
-	private boolean need_assistance;
+	@org.kie.api.definition.type.Label(value = "Last name")
+	private java.lang.String lastName;
+
+	@org.kie.api.definition.type.Label(value = "Need Assistance")
+	private boolean needAssistance;
 
 	public InsuranceEventUserData() {
 	}
 
-	public java.lang.String getFirst_name() {
-		return this.first_name;
+	public java.lang.String getFirstName() {
+		return this.firstName;
 	}
 
-	public void setFirst_name(java.lang.String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(java.lang.String firstName) {
+		this.firstName = firstName;
 	}
 
-	public java.lang.String getLast_name() {
-		return this.last_name;
+	public java.lang.String getLastName() {
+		return this.lastName;
 	}
 
-	public void setLast_name(java.lang.String last_name) {
-		this.last_name = last_name;
+	public void setLastName(java.lang.String lastName) {
+		this.lastName = lastName;
 	}
 
-	public boolean isNeed_assistance() {
-		return this.need_assistance;
+	public boolean isNeedAssistance() {
+		return this.needAssistance;
 	}
 
-	public void setNeed_assistance(boolean need_assistance) {
-		this.need_assistance = need_assistance;
+	public void setNeedAssistance(boolean needAssistance) {
+		this.needAssistance = needAssistance;
 	}
 
-	public InsuranceEventUserData(java.lang.String first_name,
-			java.lang.String last_name, boolean need_assistance) {
-		this.first_name = first_name;
-		this.last_name = last_name;
-		this.need_assistance = need_assistance;
+	public InsuranceEventUserData(java.lang.String firstName,
+			java.lang.String lastName, boolean needAssistance) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.needAssistance = needAssistance;
 	}
 
 }
