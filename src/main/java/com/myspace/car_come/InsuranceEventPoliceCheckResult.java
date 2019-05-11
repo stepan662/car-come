@@ -9,7 +9,21 @@ public class InsuranceEventPoliceCheckResult implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
+	private java.lang.Boolean isOk;
+
 	public InsuranceEventPoliceCheckResult() {
+	}
+
+	public java.lang.Boolean getIsOk() {
+		return this.isOk;
+	}
+
+	public void setIsOk(java.lang.Boolean isOk) {
+		this.isOk = isOk;
+	}
+
+	public InsuranceEventPoliceCheckResult(java.lang.Boolean isOk) {
+		this.isOk = isOk;
 	}
 
 }
