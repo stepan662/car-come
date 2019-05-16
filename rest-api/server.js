@@ -6,7 +6,8 @@ app.use(bodyParser.json())
 
 app.all('/test', function (req, res) {
   console.log(req.body)
-  res.json({ isOk: true });
+  // res.json({ isOk: true });
+  res.status(404).send()
 })
 
 app.listen(3000 , err => {
