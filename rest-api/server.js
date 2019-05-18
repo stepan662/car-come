@@ -99,7 +99,12 @@ app.all('/read-data', async (req, res) => {
 
 app.all('/route', async (req, res) => {
   console.log(req.body)
-  return res.json({"carID": 0, "distance": 20000})
+  const { source } = req.body
+  if (source == "Praha"){
+    console.log('No car found in ' + source)
+    return res.json({"carID": 0})
+  }
+  return res.json({"carID": 1, "distance": 50, "carModel": "Alfa Romeo C1", "rate": 15})
 })
 
 // start server
