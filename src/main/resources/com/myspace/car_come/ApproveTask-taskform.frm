@@ -1,0 +1,1 @@
+{"id":"65c037bf-b7cf-4a0b-af08-387a7ee1f656","name":"ApproveTask-taskform.frm","model":{"taskName":"ApproveTask","processId":"car-come.TransportRequest","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
