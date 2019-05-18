@@ -12,7 +12,7 @@
       <include>true</include>
       <metadata>
         <id>local</id>
-        <url>/Users/stepangranat/.m2/repository</url>
+        <url>/home/radim/.m2/repository</url>
         <source>LOCAL</source>
       </metadata>
     </repository>
