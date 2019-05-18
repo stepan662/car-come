@@ -8,15 +8,12 @@ public class RouteData implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Address of starting point")
+	@org.kie.api.definition.type.Label("Address of starting point")
 	private java.lang.String addressFrom;
-	@org.kie.api.definition.type.Label(value = "Address of destination")
+	@org.kie.api.definition.type.Label("Address of destination")
 	private java.lang.String addressTo;
-	@org.kie.api.definition.type.Label(value = "Departure date and time")
+	@org.kie.api.definition.type.Label("Departure date and time")
 	private java.time.LocalDateTime departure;
-	@org.kie.api.definition.type.Label(value = "Price of the transport (CZK)")
-	private java.lang.Integer price;
-
 	public RouteData() {
 	}
 
@@ -44,20 +41,11 @@ public class RouteData implements java.io.Serializable {
 		this.departure = departure;
 	}
 
-	public java.lang.Integer getPrice() {
-		return this.price;
-	}
-
-	public void setPrice(java.lang.Integer price) {
-		this.price = price;
-	}
-
 	public RouteData(java.lang.String addressFrom, java.lang.String addressTo,
-			java.time.LocalDateTime departure, java.lang.Integer price) {
+			java.time.LocalDateTime departure) {
 		this.addressFrom = addressFrom;
 		this.addressTo = addressTo;
 		this.departure = departure;
-		this.price = price;
 	}
 
 }
