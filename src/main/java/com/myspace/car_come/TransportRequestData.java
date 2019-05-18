@@ -8,32 +8,12 @@ public class TransportRequestData implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label("Confirmed by a car")
-	private java.lang.Boolean carConfirmed;
-	@org.kie.api.definition.type.Label("Approved by a customer")
-	private java.lang.Boolean userApproved;
 	@org.kie.api.definition.type.Label("Customer data")
 	private java.lang.String customer;
 	@org.kie.api.definition.type.Label("Route data")
 	private RouteData route;
 
 	public TransportRequestData() {
-	}
-
-	public java.lang.Boolean getCarConfirmed() {
-		return this.carConfirmed;
-	}
-
-	public void setCarConfirmed(java.lang.Boolean carConfirmed) {
-		this.carConfirmed = carConfirmed;
-	}
-
-	public java.lang.Boolean getUserApproved() {
-		return this.userApproved;
-	}
-
-	public void setUserApproved(java.lang.Boolean userApproved) {
-		this.userApproved = userApproved;
 	}
 
 	public java.lang.String getCustomer() {
@@ -52,11 +32,8 @@ public class TransportRequestData implements java.io.Serializable {
 		this.route = route;
 	}
 
-	public TransportRequestData(java.lang.Boolean carConfirmed,
-			java.lang.Boolean userApproved, java.lang.String customer,
+	public TransportRequestData(java.lang.String customer,
 			com.myspace.car_come.RouteData route) {
-		this.carConfirmed = carConfirmed;
-		this.userApproved = userApproved;
 		this.customer = customer;
 		this.route = route;
 	}
