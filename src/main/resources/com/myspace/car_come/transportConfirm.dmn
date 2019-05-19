@@ -12,7 +12,82 @@
     <dmn:informationRequirement id="_3D4EAC51-B1F1-4EAC-941A-C2E8EE069043">
       <dmn:requiredInput href="#_B6BF8085-763B-4392-AAF7-A346D7AF999B"/>
     </dmn:informationRequirement>
-    <dmn:literalExpression/>
+    <dmn:decisionTable id="_9A1C1AEC-4E16-4923-B8FA-489F3A882211" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_A8391D5F-1011-4A3A-9B65-794EE2724AD0">
+        <dmn:inputExpression id="_C47F04E4-BCDB-4C67-ADB9-6C2C2F40A0BB" typeRef="number">
+          <dmn:text>age</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_47DC15D6-19B7-4418-9614-0507A8A484B6">
+        <dmn:inputExpression id="_FBB0B530-EA26-4F11-AD1E-42E82BE3F319" typeRef="date and time">
+          <dmn:text>departure</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_DFABB7F1-7517-4766-9031-0E8B36020416">
+        <dmn:inputExpression id="_320606A9-780F-4BAC-B736-54B56F441A83" typeRef="number">
+          <dmn:text>distance</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_DB82365A-9ECE-47A8-90E1-0360BFDF6907" typeRef="boolean"/>
+      <dmn:rule id="_1930BD32-8B25-466A-A64F-01F7B1244E9E">
+        <dmn:description>Young people are risky after 20:00</dmn:description>
+        <dmn:inputEntry id="_73E70A88-91DE-470E-A8AD-32038636DA79">
+          <dmn:text>&lt;23</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6A278C9B-49AB-4C37-A63D-85F5A59F348D">
+          <dmn:text>&gt; time("20:00:00")</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CC3A43BB-2146-4FFA-9388-FB407D59C5B6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_86C895B7-ECAC-499B-ADE1-FAF1B8C170B0">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_BA7F3F64-47BB-47D9-ADE1-4983F288350D">
+        <dmn:inputEntry id="_79275891-B8DA-48F3-86E7-D6ACE9F4D6BB">
+          <dmn:text>&gt;70</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_78938477-EC1A-47E8-816E-5B0C0116DDF8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C9132E15-CC44-4AB9-99C5-0749F2E1E664">
+          <dmn:text>&gt;30</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_C69DB9DD-53F9-49B3-8508-43671FDCE0D0">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_A2A289A3-5106-45D0-90E2-C60D9308D3DC">
+        <dmn:description>No transport for long distances</dmn:description>
+        <dmn:inputEntry id="_6455C6C8-837C-4C0F-B897-7821F58339BC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_27F1A414-79EB-40B2-94E1-CB0E3495F370">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_DF74C173-A2DD-4E50-97E0-2D3446D43EC1">
+          <dmn:text>&gt;50</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_EF330D3E-4647-4FD5-AB98-8492F0B223A4">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule id="_3A9E5615-AE66-49A6-AD3A-947ED4E318B1">
+        <dmn:inputEntry id="_4C78558D-C7C1-4908-BBA8-17948EC5A3E1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4A311685-6885-48AE-B552-A605CEE7FBA5">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2A6E5B4D-D398-41E0-A887-1AEB89380FE2">
+          <dmn:text>&lt;51</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_260BDCED-263C-4952-9096-ECADB769396C">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
   </dmn:decision>
   <dmn:inputData id="_F8FBF0A9-685B-4FD6-B5BF-FDB327CCFF5A" name="departure">
     <dmn:variable id="_0E3B899A-EA81-40CC-B418-F4925F48F727" name="departure" typeRef="date and time"/>
@@ -26,7 +101,16 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
-        <kie:ComponentsWidthsExtension/>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_9A1C1AEC-4E16-4923-B8FA-489F3A882211">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>179.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>144.0</kie:width>
+            <kie:width>311.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
       </di:extension>
       <dmndi:DMNShape id="dmnshape-_57FDBAC7-8D10-4861-A9F2-22E93C9B91A1" dmnElementRef="_57FDBAC7-8D10-4861-A9F2-22E93C9B91A1" isCollapsed="false">
         <dmndi:DMNStyle>
