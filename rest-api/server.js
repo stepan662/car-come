@@ -54,9 +54,13 @@ app.post('/add-user', async (req, res) => {
     id: newId,
     firstName,
     lastName,
-    email
+    email,
   }
-  data.users.push(user)
+
+  data.users.push({
+    ...user,
+    borrowedCar: null
+  })
 
   await writeData(data)
 
@@ -88,7 +92,7 @@ app.post('/add-car', async (req, res) => {
   console.log('Created car')
   console.log(car)
 
-  return res.json(car)
+  return res.send("OK")
 })
 
 // dump currently saved data
