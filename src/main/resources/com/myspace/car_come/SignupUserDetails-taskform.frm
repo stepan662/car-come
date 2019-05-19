@@ -1,1 +1,0 @@
-{"id":"494acb5a-f320-4a01-933f-181f66b02016","name":"SignupUserDetails-taskform.frm","model":{"taskName":"SignupUserDetails","processId":"car-come.SignupProcess","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
