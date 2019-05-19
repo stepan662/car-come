@@ -8,12 +8,15 @@ public class SignupUserRegisterData implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "First name")
+	@org.kie.api.definition.type.Label("First name")
 	private java.lang.String firstName;
-	@org.kie.api.definition.type.Label(value = "Last name")
+	@org.kie.api.definition.type.Label("Last name")
 	private java.lang.String lastName;
-	@org.kie.api.definition.type.Label(value = "Email")
+	@org.kie.api.definition.type.Label("Email")
 	private java.lang.String email;
+
+	@org.kie.api.definition.type.Label(value = "I want to provide car")
+	private boolean haveCar;
 
 	public SignupUserRegisterData() {
 	}
@@ -42,11 +45,20 @@ public class SignupUserRegisterData implements java.io.Serializable {
 		this.email = email;
 	}
 
+	public boolean isHaveCar() {
+		return this.haveCar;
+	}
+
+	public void setHaveCar(boolean haveCar) {
+		this.haveCar = haveCar;
+	}
+
 	public SignupUserRegisterData(java.lang.String firstName,
-			java.lang.String lastName, java.lang.String email) {
+			java.lang.String lastName, java.lang.String email, boolean haveCar) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.haveCar = haveCar;
 	}
 
 }
