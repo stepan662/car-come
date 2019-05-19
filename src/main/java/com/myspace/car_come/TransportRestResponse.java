@@ -20,8 +20,8 @@ public class TransportRestResponse implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Price rate")
 	private java.lang.Integer rate;
 
-	@org.kie.api.definition.type.Label(value = "Car arrival time")
-	private java.time.OffsetDateTime carArrival;
+	@org.kie.api.definition.type.Label("Car arrival time")
+	private String carArrival;
 
 	public TransportRestResponse() {
 	}
@@ -58,17 +58,17 @@ public class TransportRestResponse implements java.io.Serializable {
 		this.rate = rate;
 	}
 
-	public java.time.OffsetDateTime getCarArrival() {
+	public java.lang.String getCarArrival() {
 		return this.carArrival;
 	}
 
-	public void setCarArrival(java.time.OffsetDateTime carArrival) {
+	public void setCarArrival(java.lang.String carArrival) {
 		this.carArrival = carArrival;
 	}
 
 	public TransportRestResponse(java.lang.Integer carID,
 			java.lang.Integer distance, java.lang.String carModel,
-			java.lang.Integer rate, java.time.OffsetDateTime carArrival) {
+			java.lang.Integer rate, java.lang.String carArrival) {
 		this.carID = carID;
 		this.distance = distance;
 		this.carModel = carModel;
