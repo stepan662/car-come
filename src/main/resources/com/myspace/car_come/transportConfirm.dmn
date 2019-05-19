@@ -3,11 +3,11 @@
   <dmn:extensionElements/>
   <dmn:decision id="_57FDBAC7-8D10-4861-A9F2-22E93C9B91A1" name="transportConfirmed">
     <dmn:variable id="_288FCB5D-7055-4659-B119-B8010FACDB08" name="transportConfirmed" typeRef="boolean"/>
-    <dmn:informationRequirement id="_89B57938-0ED6-4F78-A150-525595DC33FE">
-      <dmn:requiredInput href="#_19A6B94F-87E3-4F85-82BE-29219A5F714E"/>
-    </dmn:informationRequirement>
     <dmn:informationRequirement id="_499BAA33-BD72-4893-B8F0-A7DAB938019E">
       <dmn:requiredInput href="#_F8FBF0A9-685B-4FD6-B5BF-FDB327CCFF5A"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_89B57938-0ED6-4F78-A150-525595DC33FE">
+      <dmn:requiredInput href="#_19A6B94F-87E3-4F85-82BE-29219A5F714E"/>
     </dmn:informationRequirement>
     <dmn:informationRequirement id="_3D4EAC51-B1F1-4EAC-941A-C2E8EE069043">
       <dmn:requiredInput href="#_B6BF8085-763B-4392-AAF7-A346D7AF999B"/>
@@ -61,7 +61,7 @@
       <dmn:rule id="_A2A289A3-5106-45D0-90E2-C60D9308D3DC">
         <dmn:description>No transport for long distances</dmn:description>
         <dmn:inputEntry id="_6455C6C8-837C-4C0F-B897-7821F58339BC">
-          <dmn:text>-</dmn:text>
+          <dmn:text>&lt;71</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_27F1A414-79EB-40B2-94E1-CB0E3495F370">
           <dmn:text>-</dmn:text>
@@ -81,7 +81,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_2A6E5B4D-D398-41E0-A887-1AEB89380FE2">
-          <dmn:text>&lt;51</dmn:text>
+          <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_260BDCED-263C-4952-9096-ECADB769396C">
           <dmn:text>true</dmn:text>
@@ -121,6 +121,15 @@
         <dc:Bounds x="444" y="112" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_F8FBF0A9-685B-4FD6-B5BF-FDB327CCFF5A" dmnElementRef="_F8FBF0A9-685B-4FD6-B5BF-FDB327CCFF5A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="444" y="262" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_19A6B94F-87E3-4F85-82BE-29219A5F714E" dmnElementRef="_19A6B94F-87E3-4F85-82BE-29219A5F714E" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -139,26 +148,17 @@
         <dc:Bounds x="622" y="262" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_F8FBF0A9-685B-4FD6-B5BF-FDB327CCFF5A" dmnElementRef="_F8FBF0A9-685B-4FD6-B5BF-FDB327CCFF5A" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="444" y="262" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNEdge id="dmnedge-_89B57938-0ED6-4F78-A150-525595DC33FE" dmnElementRef="_89B57938-0ED6-4F78-A150-525595DC33FE">
-        <di:waypoint x="364.5981308411215" y="287"/>
-        <di:waypoint x="444" y="137"/>
-      </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_499BAA33-BD72-4893-B8F0-A7DAB938019E" dmnElementRef="_499BAA33-BD72-4893-B8F0-A7DAB938019E">
         <di:waypoint x="544" y="287"/>
-        <di:waypoint x="444" y="137"/>
+        <di:waypoint x="494" y="162"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_89B57938-0ED6-4F78-A150-525595DC33FE" dmnElementRef="_89B57938-0ED6-4F78-A150-525595DC33FE">
+        <di:waypoint x="364.5981308411215" y="287"/>
+        <di:waypoint x="494" y="162"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_3D4EAC51-B1F1-4EAC-941A-C2E8EE069043" dmnElementRef="_3D4EAC51-B1F1-4EAC-941A-C2E8EE069043">
         <di:waypoint x="622" y="287"/>
-        <di:waypoint x="544" y="137"/>
+        <di:waypoint x="494" y="162"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
