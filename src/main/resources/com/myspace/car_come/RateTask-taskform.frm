@@ -1,0 +1,1 @@
+{"id":"fa333175-a61f-44ab-b332-dd947c1fd3bc","name":"RateTask-taskform.frm","model":{"taskName":"RateTask","processId":"car-come.TransportRequest","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
