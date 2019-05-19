@@ -81,7 +81,7 @@
           <dmn:text>-</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_2A6E5B4D-D398-41E0-A887-1AEB89380FE2">
-          <dmn:text>-</dmn:text>
+          <dmn:text>&lt;51</dmn:text>
         </dmn:inputEntry>
         <dmn:outputEntry id="_260BDCED-263C-4952-9096-ECADB769396C">
           <dmn:text>true</dmn:text>
