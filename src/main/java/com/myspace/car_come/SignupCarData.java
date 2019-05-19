@@ -6,12 +6,24 @@ package com.myspace.car_come;
 
 public class SignupCarData implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public SignupCarData() {
-    }
+	@org.kie.api.definition.type.Label(value = "Car licence number")
+	private java.lang.String licence;
 
+	public SignupCarData() {
+	}
 
+	public java.lang.String getLicence() {
+		return this.licence;
+	}
 
+	public void setLicence(java.lang.String licence) {
+		this.licence = licence;
+	}
+
+	public SignupCarData(java.lang.String licence) {
+		this.licence = licence;
+	}
 
 }
