@@ -96,16 +96,28 @@ app.all('/read-data', async (req, res) => {
   return res.json(await loadData())
 })
 
-
+//route handling
 app.all('/route', async (req, res) => {
   console.log(req.body)
-  const { source } = req.body
-  if (source == "Praha"){
-    console.log('No car found in ' + source)
+  const { from } = req.body
+  if (from == "Praha"){
+    console.log('No car found in ' + from)
     return res.json({"carID": 0})
   }
-  return res.json({"carID": 1, "distance": 50, "carModel": "Alfa Romeo C1", "rate": 15})
+  return res.json({"carID": 1, "distance": 50, "carModel": "Alfa Romeo C1", "rate": 15, "carArrival": "2019-05-19T18:30:30+02:00"})
 })
+
+
+//payment verification
+app.all('/payment', async (req, res) => {
+  console.log(req.body)
+  const { owner } = req.body
+  if ( owner == "invalid" ){
+    return res.status(401).send("Not verified")
+  }
+  return res.status(200).send("OK")
+})
+
 
 // start server
 const main = async () => {
