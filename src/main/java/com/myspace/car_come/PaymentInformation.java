@@ -6,12 +6,59 @@ package com.myspace.car_come;
 
 public class PaymentInformation implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public PaymentInformation() {
-    }
+	@org.kie.api.definition.type.Label(value = "Name of account owner")
+	private java.lang.String name;
+	@org.kie.api.definition.type.Label(value = "Credit card number")
+	private java.lang.String cardNumber;
+	@org.kie.api.definition.type.Label(value = "Security code")
+	private java.lang.String securityCode;
+	@org.kie.api.definition.type.Label(value = "Expiration date")
+	private java.time.LocalDate expiration;
 
+	public PaymentInformation() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public java.lang.String getCardNumber() {
+		return this.cardNumber;
+	}
+
+	public void setCardNumber(java.lang.String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public java.lang.String getSecurityCode() {
+		return this.securityCode;
+	}
+
+	public void setSecurityCode(java.lang.String securityCode) {
+		this.securityCode = securityCode;
+	}
+
+	public java.time.LocalDate getExpiration() {
+		return this.expiration;
+	}
+
+	public void setExpiration(java.time.LocalDate expiration) {
+		this.expiration = expiration;
+	}
+
+	public PaymentInformation(java.lang.String name,
+			java.lang.String cardNumber, java.lang.String securityCode,
+			java.time.LocalDate expiration) {
+		this.name = name;
+		this.cardNumber = cardNumber;
+		this.securityCode = securityCode;
+		this.expiration = expiration;
+	}
 
 }
