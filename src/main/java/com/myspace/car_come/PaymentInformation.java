@@ -8,14 +8,14 @@ public class PaymentInformation implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Name of account owner")
+	@org.kie.api.definition.type.Label("Name of account owner")
 	private java.lang.String name;
-	@org.kie.api.definition.type.Label(value = "Credit card number")
+	@org.kie.api.definition.type.Label("Credit card number")
 	private java.lang.String cardNumber;
-	@org.kie.api.definition.type.Label(value = "Security code")
+	@org.kie.api.definition.type.Label("Security code")
 	private java.lang.String securityCode;
-	@org.kie.api.definition.type.Label(value = "Expiration date")
-	private java.time.LocalDate expiration;
+	@org.kie.api.definition.type.Label("Expiration date")
+	private String expiration;
 
 	public PaymentInformation() {
 	}
@@ -44,17 +44,17 @@ public class PaymentInformation implements java.io.Serializable {
 		this.securityCode = securityCode;
 	}
 
-	public java.time.LocalDate getExpiration() {
+	public java.lang.String getExpiration() {
 		return this.expiration;
 	}
 
-	public void setExpiration(java.time.LocalDate expiration) {
+	public void setExpiration(java.lang.String expiration) {
 		this.expiration = expiration;
 	}
 
 	public PaymentInformation(java.lang.String name,
 			java.lang.String cardNumber, java.lang.String securityCode,
-			java.time.LocalDate expiration) {
+			java.lang.String expiration) {
 		this.name = name;
 		this.cardNumber = cardNumber;
 		this.securityCode = securityCode;
