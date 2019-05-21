@@ -75,7 +75,7 @@
       </dmn:rule>
       <dmn:rule id="_3A9E5615-AE66-49A6-AD3A-947ED4E318B1">
         <dmn:inputEntry id="_4C78558D-C7C1-4908-BBA8-17948EC5A3E1">
-          <dmn:text>-</dmn:text>
+          <dmn:text>&lt;71</dmn:text>
         </dmn:inputEntry>
         <dmn:inputEntry id="_4A311685-6885-48AE-B552-A605CEE7FBA5">
           <dmn:text>-</dmn:text>
