@@ -103,12 +103,35 @@ app.all('/read-data', async (req, res) => {
 //route handling
 app.all('/route', async (req, res) => {
   console.log(req.body)
-  const { from } = req.body
-  if (from == "Praha"){
-    console.log('No car found in ' + from)
+  const { customerEmail, session } = req.body
+
+  try {
+    const data = await loadData()
+    const user = data.users.find(u => u.email === "granat.stepan@gmail.com")
+
+    if ( data.session_car[session] == undefined ){
+      console.log("New session_car mapping created")
+      data.session_car[session] = data.cars.slice();
+    }
+    const car = data.session_car[session].pop()
+    user.borrowedCar = car.id
+    console.log("Returning car with id: " + car.id)
+
+    await writeData(data)
+
+    const resp = {
+      carId: car.id,
+      distance: 30,
+      carModel: car.model,
+      rate: car.rate,
+      carArrival: "2019-05-19T22:34:30+02:00",
+      customerAge: user.age
+    }
+    return res.json(resp)
+  } catch (e) {
+    console.error(e)
     return res.json({"carID": 0})
   }
-  return res.json({"carID": 1, "distance": 50, "carModel": "Alfa Romeo C1", "rate": 15, "carArrival": "2019-05-19T18:30:30+02:00"})
 })
 
 

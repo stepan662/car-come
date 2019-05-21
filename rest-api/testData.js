@@ -4,17 +4,28 @@ module.exports = {
     firstName: "Stepan",
     lastName: "Granat",
     email: "granat.stepan@gmail.com",
-    borrowedCar: 0
+    age: 30,
+    borrowedCar: null
   },{
     id: 1,
     firstName: "Hanz",
     lastName: "Gruber",
-    email: "granat.stepan@gmail.com",
+    email: "Hanz.Gruber@gmail.com",
+    age: 45,
     borrowedCar: null
   }],
   cars: [{
-    id: 0,
+    id: 1,
     licence: "IMS0RRY",
+    model: "Alfa Romeo C4",
+    rate: 15,
     ownerId: 1
-  }]
+  },{
+    id: 2,
+    licence: "XXXXX",
+    model: "Audi A3",
+    rate: 25,
+    ownerId: 1
+  }],
+  session_car: {}
 }
