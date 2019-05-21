@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const morgan = require('morgan')
+const moment = require('moment')
 
 const testData = require('./testData')
 const { loadData, writeData } = require('./storage')
@@ -103,15 +104,18 @@ app.all('/read-data', async (req, res) => {
 //route handling
 app.all('/route', async (req, res) => {
   console.log(req.body)
-  const { customerEmail, session } = req.body
+  const { email, session, time } = req.body
+
+  var arrival = moment(time).add(2, "minutes").format("YYYY-MM-DDTHH:mm:ssZ")
+  console.log(arrival)
 
   try {
     const data = await loadData()
-    const user = data.users.find(u => u.email === "granat.stepan@gmail.com")
+    const user = data.users.find(u => u.email === email)
 
     if ( data.session_car[session] == undefined ){
       console.log("New session_car mapping created")
-      data.session_car[session] = data.cars.slice();
+      data.session_car[session] = data.cars.slice()
     }
     const car = data.session_car[session].pop()
     user.borrowedCar = car.id
@@ -120,17 +124,18 @@ app.all('/route', async (req, res) => {
     await writeData(data)
 
     const resp = {
-      carId: car.id,
+      carID: car.id,
       distance: 30,
       carModel: car.model,
       rate: car.rate,
-      carArrival: "2019-05-19T22:34:30+02:00",
-      customerAge: user.age
+      licence: car.licence,
+      carArrival: arrival,
+      userAge: user.age
     }
     return res.json(resp)
   } catch (e) {
     console.error(e)
-    return res.json({"carID": 0})
+    return res.json({"carID": null})
   }
 })
 
