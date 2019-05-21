@@ -1,0 +1,1 @@
+{"id":"2e195845-c0c8-4db5-a974-55adb03d4784","name":"ConfirmTask-taskform.frm","model":{"taskName":"ConfirmTask","processId":"car-come.TransportProcess","properties":[],"formModelType":"org.kie.workbench.common.forms.jbpm.model.authoring.task.TaskFormModel"},"fields":[],"layoutTemplate":{"version":2,"style":"FLUID","layoutProperties":{},"rows":[]}}
