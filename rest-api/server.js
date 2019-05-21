@@ -125,7 +125,7 @@ app.all('/route', async (req, res) => {
 
     const resp = {
       carID: car.id,
-      distance: 30,
+      distance: 31,
       carModel: car.model,
       rate: car.rate,
       licence: car.licence,
