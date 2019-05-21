@@ -8,32 +8,13 @@ public class InsuranceEventUserData implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "First name")
-	private java.lang.String firstName;
-
-	@org.kie.api.definition.type.Label(value = "Last name")
-	private java.lang.String lastName;
-
-	@org.kie.api.definition.type.Label(value = "Need Assistance")
+	@org.kie.api.definition.type.Label("Need Assistance")
 	private boolean needAssistance;
 
+	@org.kie.api.definition.type.Label(value = "Email")
+	private java.lang.String email;
+
 	public InsuranceEventUserData() {
-	}
-
-	public java.lang.String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName(java.lang.String firstName) {
-		this.firstName = firstName;
-	}
-
-	public java.lang.String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName(java.lang.String lastName) {
-		this.lastName = lastName;
 	}
 
 	public boolean isNeedAssistance() {
@@ -44,11 +25,17 @@ public class InsuranceEventUserData implements java.io.Serializable {
 		this.needAssistance = needAssistance;
 	}
 
-	public InsuranceEventUserData(java.lang.String firstName,
-			java.lang.String lastName, boolean needAssistance) {
-		this.firstName = firstName;
-		this.lastName = lastName;
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public InsuranceEventUserData(boolean needAssistance, java.lang.String email) {
 		this.needAssistance = needAssistance;
+		this.email = email;
 	}
 
 }

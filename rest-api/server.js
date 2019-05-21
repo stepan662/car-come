@@ -18,8 +18,8 @@ app.all('/get-car-owner', async (req, res) => {
   let owner = null
   try {
     const data = await loadData()
-    const { firstName, lastName } = req.body
-    const user = data.users.find(u => u.firstName === firstName && u.lastName === lastName)
+    const { email } = req.body
+    const user = data.users.find(u => u.email == email)
     const car = data.cars.find(c => c.id === user.borrowedCar)
     owner = data.users.find(u => u.id === car.ownerId)
   } catch (e) {
@@ -75,16 +75,18 @@ app.post('/add-user', async (req, res) => {
 app.post('/add-car', async (req, res) => {
   const data = await loadData()
   const newId = data.cars[data.cars.length - 1].id + 1
-  const { licence, ownerId } = req.body
+  const { licence, ownerId, model, rate} = req.body
 
-  if (!(licence && ownerId)) {
+  if (!(licence && ownerId && model && rate)) {
     return res.status(422).send("Incorrect data")
   }
 
   const car = {
     id: newId,
     licence,
-    ownerId
+    ownerId,
+    model,
+    rate
   }
   data.cars.push(car)
 

@@ -8,8 +8,14 @@ public class SignupCarData implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "Car licence number")
+	@org.kie.api.definition.type.Label("Car licence number")
 	private java.lang.String licence;
+
+	@org.kie.api.definition.type.Label(value = "Model")
+	private java.lang.String model;
+
+	@org.kie.api.definition.type.Label(value = "Rate")
+	private java.lang.Integer rate;
 
 	public SignupCarData() {
 	}
@@ -22,8 +28,27 @@ public class SignupCarData implements java.io.Serializable {
 		this.licence = licence;
 	}
 
-	public SignupCarData(java.lang.String licence) {
+	public java.lang.String getModel() {
+		return this.model;
+	}
+
+	public void setModel(java.lang.String model) {
+		this.model = model;
+	}
+
+	public java.lang.Integer getRate() {
+		return this.rate;
+	}
+
+	public void setRate(java.lang.Integer rate) {
+		this.rate = rate;
+	}
+
+	public SignupCarData(java.lang.String licence, java.lang.String model,
+			java.lang.Integer rate) {
 		this.licence = licence;
+		this.model = model;
+		this.rate = rate;
 	}
 
 }
